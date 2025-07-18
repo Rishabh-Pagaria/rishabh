@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard';
 const ProjectsSection: React.FC = () => {
   const projects = [
     {
-      thumbnail: '../src/assets/Rakuun.png',
+      thumbnail: 'images/Rakuun.png',
       title: 'Rakuun',
       description: 'The customer is looking for an event management application similar to Ticketmaster, but specifically designed for the fashion industry. The platform enables users to manage guest lists, ticket sales, RSVPs, customer rewards, and send emails in one centralized space.',
       role: 'The project was developed as part of the Software Engineering final project where the client was FashioNXT, where we were supposed to work on legacy codebase, debugging, and implementing new features using agile methodologies.',
@@ -13,7 +13,7 @@ const ProjectsSection: React.FC = () => {
       githubLink: 'https://github.com/FashioNXT/EventNXT-Fall2024/tree/main'
     },
     {
-      thumbnail: '../src/assets/EventNXT.png',
+      thumbnail: 'images/EventNXT.png',
       title: 'EventNXT',
       description: 'The customer is looking for an event management application similar to Ticketmaster, but specifically designed for the fashion industry. The platform enables users to manage guest lists, ticket sales, RSVPs, customer rewards, and send emails in one centralized space.',
       role: 'The project was developed as part of the Software Engineering final project where the client was FashioNXT, where we were supposed to work on legacy codebase, debugging, and implementing new features using agile methodologies.',
@@ -22,7 +22,7 @@ const ProjectsSection: React.FC = () => {
       githubLink: 'https://github.com/FashioNXT/EventNXT-Fall2024/tree/main'
     },
     {
-      thumbnail: '../src/assets/seatFlex.png',
+      thumbnail: 'images/seatFlex.png',
       title: 'SeatFlex',
       description: 'An Airline Overbooking Volunteer System that allows users to volunteer for overbooked flights, helping airlines manage passenger loads efficiently.',
       role: 'Project Lead and UI/UX Designer responsible for leading the project from conception to implementation.',
@@ -31,7 +31,7 @@ const ProjectsSection: React.FC = () => {
       githubLink: '#'
     },
     {
-      thumbnail: '../src/assets/LithiScanner.jpg',
+      thumbnail: 'images/LithiScanner.jpg',
       title: 'LithiScan',
       description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
       role: 'Frontend Developer focused on creating intuitive user interfaces and implementing real-time collaboration features.',
