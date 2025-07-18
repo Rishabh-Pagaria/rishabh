@@ -1,12 +1,12 @@
 {
   "name": "portfolio",
-  "homepage": "https://Rishabh-Pagaria.github.io/rishabh.github.io",
+  "homepage": "https://Rishabh-Pagaria.github.io/rishabh",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "deploy": "gh-pages -d build",
+    "deploy": "npm run build && gh-pages -d dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
