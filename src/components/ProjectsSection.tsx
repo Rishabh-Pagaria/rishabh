@@ -22,6 +22,15 @@ const ProjectsSection: React.FC = () => {
       githubLink: 'https://github.com/FashioNXT/EventNXT-Fall2024/tree/main'
     },
     {
+      thumbnail: 'images/Calorie.png',
+      title: 'LSTM-CNN Model for Caloric Prediction: A Multi-Modal Approach',
+      description: 'This is a multimodal deep learning system designed to predict lunch calorie intake by integrating continuous glucose monitoring (CGM) time series data with breakfast and lunch food images. The system utilizes CNN for spatial feature extraction from meal images and LSTM for temporal pattern recognition from CGM data. These outputs are fused and passed through a fully connected network to provide accurate caloric predictions. The project leverages diverse data types like demographics, microbiome, and nutritional data for enhanced robustness and interpretability.',
+      role: 'Accurately estimating calorie intake from diverse input data is challenging and vital for healthcare applications. As a Deep Learning Researcher, I contributed to designing and implementing the dual-pathway architecture using CNN and LSTM, led preprocessing for multimodal input fusion, and performed hyperparameter tuning and model evaluation. I also collaborated on presenting the final results and visualizations to demonstrate model effectiveness.',
+      services: ['Deep Learning (CNN + LSTM)', 'Multimodal Data Fusion', 'Preprocessing & Normalization', 'Model Evaluation & Optimization', 'Hyperparameter Tuning', 'Team Collaboration & Presentation'],
+      demoLink: 'https://www.youtube.com/watch?v=Fon2hM_gY-o',
+      githubLink: 'https://github.com/Rishabh-Pagaria/calorie-estimation'
+    },
+    {
       thumbnail: 'images/seatFlex.png',
       title: 'SeatFlex',
       description: 'As part of the TAMUHACK 2025 hackathon, our team developed an Airline Overbooking Volunteer System as American Airline Challenge. This application is part of a MVP that allows users to volunteer for overbooked flights, helping airlines manage passenger loads efficiently.',
