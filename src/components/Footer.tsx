@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <p>&copy; {currentYear} Rishabh. Built with React & TypeScript.</p>
+        <p>&copy; {currentYear} Built with Classic Cold Brew</p>
       </div>
     </footer>
   );

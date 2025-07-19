@@ -19,12 +19,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection }) => {
               <span className="highlight">Rishabh Pagaria</span>
             </h1>
             <p className="hero-subtitle">
-              Brewing and developinng smoother experiences
+              Brewing and developing smoother experiences
             </p>
             <div className="hero-description">
               <p>
                 To me, crafting great user experiences is like brewing the perfect cup: it takes the right blend of design, logic, and a little bit of magic. 
-                I’m gonna be the King of the Classic Brews. Listening to...
+                I'm gonna be the King of Classic Brews. Listening to...
               </p>
             </div>
             <div className="cta-buttons">
