@@ -31,6 +31,15 @@ const ContactSection: React.FC = () => {
         >
           <img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" className='sticky-contact-icon' alt="GitHub Button" />
         </a>
+        <a 
+          href="https://www.instagram.com/yet_minimalistic/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="sticky-contact-link"
+          title="Instagram"
+        >
+          <img src="https://img.icons8.com/?size=100&id=59813&format=png&color=000000" className='sticky-contact-icon' alt="GitHub Button" />
+        </a>
       </div>
 
       <section id="contact" className="section contact-section">
