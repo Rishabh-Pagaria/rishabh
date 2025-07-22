@@ -4,15 +4,6 @@ import ProjectCard from './ProjectCard';
 const ProjectsSection: React.FC = () => {
   const projects = [
     {
-      thumbnail: 'images/Rakuun.png',
-      title: 'Rakuun',
-      description: 'Rakunn is a chrome extension that allows users to select text on any webpage and smartly extracting the recipeints email, generating a subject and personalized email body, and you can send the email directly from the extension, just a button click away.',
-      role: 'Writing personalized emails is always been a tedious and long task, and thus Rakuun aims to simplify this process by automating email composition. So, here I worked as a Full Stack Developer using Next.js, Google Cloud for Authentication, Gemini API for GenAI to generate and fetch email, and Supabase as Database to store the tokens for user authentication.',
-      services: ['Full Stack Development using Next.js', 'GenAI', 'Google Cloud', 'Google Authentication','Google gemini API', 'Database using Supabase','Branding & Marketing'],
-      demoLink: '#',
-      githubLink: 'https://github.com/Rishabh-Pagaria/rakuun'
-    },
-    {
       thumbnail: 'images/EventNXT.png',
       title: 'EventNXT',
       description: 'The customer is looking for an event management application similar to Ticketmaster, but specifically designed for the fashion industry. The platform enables users to manage guest lists, ticket sales, RSVPs, customer rewards, and send emails in one centralized space.',
