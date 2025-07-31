@@ -28,12 +28,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection }) => {
               </p>
             </div>
             <div className="cta-buttons">
-              <button 
+                <a 
+                href="https://drive.google.com/file/d/1nF3iwomsx5vsWLh9yvhZ3hduzFmPmpOC/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="btn btn-primary"
-                onClick={() => scrollToSection('projects')}
-              >
-                View My Work
-              </button>
+                >Resume</a>
               <button 
                 className="btn btn-secondary"
                 onClick={() => scrollToSection('contact')}
