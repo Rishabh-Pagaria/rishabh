@@ -6,9 +6,18 @@ const ProjectsSection: React.FC = () => {
     {
       thumbnail: 'images/Rakuun.png',
       title: 'Rakuun',
-      description: 'Rakunn is a chrome extension that allows users to select text on any webpage and smartly extracting the recipeints email, generating a subject and personalized email body, and you can send the email directly from the extension, just a button click away.',
-      role: 'Writing personalized emails is always been a tedious and long task, and thus Rakuun aims to simplify this process by automating email composition. So, here I worked as a Full Stack Developer using Next.js, Google Cloud for Authentication, Gemini API for GenAI to generate and fetch email, and Supabase as Database to store the tokens for user authentication.',
-      services: ['Full Stack Development using Next.js', 'GenAI', 'Google Cloud', 'Google Authentication','Google gemini API', 'Database using Supabase','Branding & Marketing'],
+      description: 'Rakuun is a Chrome extension that intelligently selects webpage text to extract recipient emails, generate contextual subject lines and personalized email content using AI, with seamless one-click email sending directly from the extension interface.',
+      role: 'Professional email outreach is often time-consuming and requires manual personalization for each recipient. Rakuun revolutionizes this process by leveraging AI to automate intelligent email composition based on webpage context. I served as Full Stack Developer, architecting the entire system using Next.js for the web dashboard, Chrome Extension APIs for browser integration, Google Gemini AI for content generation, Supabase for authentication and data persistence, and implementing OAuth 2.0 for secure user management.',
+      services: [
+        'Full Stack Development using Next.js',
+        'Chrome Extension Development',
+    'AI Integration with Google Gemini API', 
+    'Authentication using Supabase Auth', 
+    'Database Design with Supabase', 
+    'Google OAuth 2.0 Implementation',
+    'RESTful API Development',
+    'Prompt Engineering for LLMs'
+  ],
       demoLink: '#',
       githubLink: 'https://github.com/Rishabh-Pagaria/rakuun'
     },
