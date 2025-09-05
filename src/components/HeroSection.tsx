@@ -29,7 +29,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection }) => {
             </div>
             <div className="cta-buttons">
                 <a 
-                href="https://drive.google.com/file/d/1nF3iwomsx5vsWLh9yvhZ3hduzFmPmpOC/view?usp=sharing" 
+                href="https://drive.google.com/file/d/1cTlh_CFfiZ0CuKXE2wleGtD3yBBBKXyc/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn btn-primary"
