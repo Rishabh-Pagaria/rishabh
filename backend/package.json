@@ -1,0 +1,16 @@
+{
+  "name": "rishabhv2-backend",
+  "description": "Portfolio API for rishabhv2 — serves portfolio content and receives contact messages",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
