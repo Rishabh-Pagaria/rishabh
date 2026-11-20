@@ -25,10 +25,10 @@ const ProjectsSection: React.FC = () => {
       links: []
     },
     {
-      thumbnail: 'images/phishguard.svg',
+      thumbnail: 'images/phishguard.jpg',
       title: 'PhishGuard',
       badge: "Master's thesis, Texas A&M · Published at ICAIR 2025",
-      description: 'A privacy-preserving phishing detector that explains its verdicts in a Gmail side panel. A fine-tuned classifier flags the email and a small language model explains why, and the raw email never leaves the local trust boundary.',
+      description: 'A privacy-preserving phishing detector that explains its verdicts in a Gmail side panel. A fine-tuned classifier flags the email and a small language model explains why, and the raw email never leaves the local trust boundary. It won 1st place at TAMU Student Research Week 2026.',
       role: 'I built it end to end, from problem framing to deployment: a FastAPI backend serving a fine-tuned DeBERTa-v3 classifier (0.979 F1 on held-out emails) and a LoRA-tuned Gemma-2 explanation model. A confidence gate skips the LLM for low-risk emails, cutting average response latency 45.5%.',
       services: ['FastAPI', 'DeBERTa-v3 fine-tuning', 'Gemma-2 + LoRA', 'Google Apps Script (Gmail add-on)', 'Prompt-injection hardening'],
       links: [{ label: 'Paper', url: 'https://papers.academic-conferences.org/index.php/icair/article/view/4373' }]

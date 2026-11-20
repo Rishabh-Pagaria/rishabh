@@ -7,4 +7,3 @@ export { default as ContactForm } from './ContactForm';
 export { default as ContactSection } from './ContactSection';
 export { default as Footer } from './Footer';
 export { default as AchievementsSection } from './AchievementsSection';
-export { default as ActivitiesSection } from './ActivitiesSection';

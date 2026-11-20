@@ -3,7 +3,6 @@ import './App.css';
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
 import AchievementsSection from './components/AchievementsSection';
-import ActivitiesSection from './components/ActivitiesSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -25,7 +24,6 @@ const App: React.FC = () => {
       <HeroSection scrollToSection={scrollToSection} />
       <AchievementsSection />
       <ProjectsSection />
-      <ActivitiesSection />
       <ContactSection />
       <Footer />
     </div>
