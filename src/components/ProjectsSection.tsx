@@ -7,7 +7,7 @@ const ProjectsSection: React.FC = () => {
     demoLink?: string; githubLink?: string; links?: { label: string; url: string }[]; badge?: string;
   }[] = [
     {
-      thumbnail: 'images/loupein.svg',
+      thumbnail: 'images/loupein.jpg',
       title: 'Loupein',
       badge: '1st place, Agents Track, AITX Community Hackathon, Houston (Sept 2026)',
       description: 'A proof-of-concept dental assistant. Before a procedure, it reviews the patient\'s chart and surfaces only the findings the record actually supports, each linked back to its source row. It runs as a phone-width web app with hands-free voice.',
@@ -16,7 +16,7 @@ const ProjectsSection: React.FC = () => {
       links: [{ label: 'GitHub', url: 'https://github.com/agenticLoupes/agenticloop' }]
     },
     {
-      thumbnail: 'images/opengrid.svg',
+      thumbnail: 'images/opengrid.jpg',
       title: 'OpenGrid',
       badge: '2nd place, Base Power x AITX Hackathon, Austin Deep Tech Week (Sept 2026)',
       description: 'An orchestrator for a fleet of home batteries. It pulls live data from ERCOT, the EIA and the National Weather Service, decides how to sell battery capacity across several customers, and sends signed commands to every battery, while a separate checker vetoes any command that breaks a hard rule, like selling the same kilowatt-hour twice.',
@@ -42,24 +42,6 @@ const ProjectsSection: React.FC = () => {
       services: ['React Native', 'Expo', 'TypeScript', 'Firebase Auth', 'Firestore', 'React Native Maps'],
       links: [{ label: 'Devpost', url: 'https://devpost.com/software/tricko' }, { label: 'GitHub', url: 'https://github.com/Rishabh-Pagaria/tricko' }]
     },
-    {
-      thumbnail: 'images/Rakuun.png',
-      title: 'Rakuun',
-      description: 'Rakuun is a Chrome extension that intelligently selects webpage text to extract recipient emails, generate contextual subject lines and personalized email content using AI, with seamless one-click email sending directly from the extension interface.',
-      role: 'Professional email outreach is often time-consuming and requires manual personalization for each recipient. Rakuun uses AI to automate intelligent email composition based on webpage context. I served as Full Stack Developer, architecting the entire system using Next.js for the web dashboard, Chrome Extension APIs for browser integration, Google Gemini AI for content generation, Supabase for authentication and data persistence, and implementing OAuth 2.0 for secure user management.',
-      services: [
-        'Full Stack Development using Next.js',
-        'Chrome Extension Development',
-    'AI Integration with Google Gemini API', 
-    'Authentication using Supabase Auth', 
-    'Database Design with Supabase', 
-    'Google OAuth 2.0 Implementation',
-    'RESTful API Development',
-    'Prompt Engineering for LLMs'
-  ],
-      demoLink: '#',
-      githubLink: 'https://github.com/Rishabh-Pagaria/rakuun'
-    },
     {
       thumbnail: 'images/EventNXT.png',
       title: 'EventNXT',
