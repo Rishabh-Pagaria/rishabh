@@ -700,3 +700,31 @@ border-radius: 5px;
 .activity-detail { margin: 0; color: var(--text-dark); line-height: 1.55; }
 .project-badge { display: inline-block; background: #f3e6da; color: var(--coffee-dark); font-size: 0.85rem; font-weight: 600; padding: 0.3rem 0.6rem; border-radius: 6px; margin: 0 0 0.8rem; }
 @media (max-width: 480px) { .project-card { width: 100%; } }
+/* Activities carousel */
+.carousel { max-width: 760px; margin: 0 auto; }
+.carousel-frame { position: relative; height: 420px; border-radius: 12px; overflow: hidden; background: var(--light-gray); box-shadow: var(--shadow); }
+.carousel-image { width: 100%; height: 100%; object-fit: cover; display: block; }
+.carousel-placeholder { height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem; color: #fff; font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, var(--coffee-dark), var(--coffee-light)); }
+.carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: none; border-radius: 50%; background: rgba(255,255,255,0.85); color: var(--coffee-primary); font-size: 1.8rem; line-height: 1; cursor: pointer; box-shadow: var(--shadow); }
+.carousel-btn:hover { background: #fff; }
+.carousel-btn.prev { left: 12px; }
+.carousel-btn.next { right: 12px; }
+.carousel-caption { text-align: center; padding: 1.2rem 0.5rem 0.5rem; }
+.carousel-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 0.5rem; }
+.carousel-dot { width: 10px; height: 10px; border-radius: 50%; border: none; background: var(--medium-gray); cursor: pointer; padding: 0; }
+.carousel-dot.active { background: var(--coffee-primary); }
+@media (max-width: 768px) {
+  .carousel-frame { height: 300px; }
+  .carousel-placeholder { font-size: 1.5rem; }
+  /* contact icons: bottom bar on phones so they never cover text */
+  .footer { padding-bottom: 80px; }
+  .sticky-contact-menu { left: 50%; right: auto; top: auto; bottom: 12px; transform: translateX(-50%); flex-direction: row; padding: 6px 10px; }
+}
+@media (max-width: 480px) {
+  .sticky-contact-menu { left: 50%; padding: 6px 10px; }
+}
+@media (max-width: 480px) {
+  .nav-item:first-child { display: none; }
+  .nav-menu { gap: 0.2rem; }
+  .nav-link { padding: 0.2rem 0.45rem; font-size: 0.78rem; }
+}
