@@ -19,17 +19,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection }) => {
               <span className="highlight">Rishabh Pagaria</span>
             </h1>
             <p className="hero-subtitle">
-              Brewing and developing smoother experiences
+              Full-stack engineer building AI agents, from React to FastAPI and PostgreSQL
             </p>
             <div className="hero-description">
               <p>
-                To me, crafting great user experiences is like brewing the perfect cup: it takes the right blend of design, logic, and a little bit of magic. 
-                I'm gonna be the King of Classic Brews. Listening to...
+                I'm a Software Engineer at Bizmetric Partners Inc., where I build AI agents for a no-code platform: the React screens, the Python services behind them, and the guardrails that keep them safe. I hold a Master of Science in Computer Science from Texas A&amp;M, and I've won or placed at five hackathons. I like hard problems, tight deadlines and code that proves it works. Usually with a good cold brew nearby.
               </p>
             </div>
             <div className="cta-buttons">
                 <a 
-                href="https://drive.google.com/file/d/1ijoWTSiA6RkkWtWDqBCUrklqubw5VQ5R/view?usp=sharing" 
+                href="Rishabh_Pagaria_Resume.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn btn-primary"
@@ -75,7 +74,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection }) => {
                   <span className="code-comma">,</span>
                 </div>
                 <div className="code-line code-indent">
-                  <span className="code-string">"Innovation"</span>
+                  <span className="code-string">"Python"</span>
+                  <span className="code-comma">,</span>
+                </div>
+                <div className="code-line code-indent">
+                  <span className="code-string">"FastAPI"</span>
+                  <span className="code-comma">,</span>
+                </div>
+                <div className="code-line code-indent">
+                  <span className="code-string">"LangGraph"</span>
                 </div>
                 <div className="code-line">
                   <span className="code-bracket">];</span>

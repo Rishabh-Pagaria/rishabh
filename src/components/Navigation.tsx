@@ -24,10 +24,26 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, scrollToSection 
           </li>
           <li className="nav-item">
             <button
+              className={`nav-link ${activeSection === 'achievements' ? 'active' : ''}`}
+              onClick={() => scrollToSection('achievements')}
+            >
+              Achievements
+            </button>
+          </li>
+          <li className="nav-item">
+            <button
               className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
               onClick={() => scrollToSection('projects')}
             >
               Projects
+            </button>
+          </li>
+          <li className="nav-item">
+            <button
+              className={`nav-link ${activeSection === 'activities' ? 'active' : ''}`}
+              onClick={() => scrollToSection('activities')}
+            >
+              Activities
             </button>
           </li>
           <li className="nav-item">

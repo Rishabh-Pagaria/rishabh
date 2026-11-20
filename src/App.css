@@ -684,3 +684,19 @@ border-radius: 5px;
     font-size: 16px;
   }
 }
+
+/* Achievements + Activities (Nov 2026) */
+.achievements-section, .activities-section { min-height: auto; }
+.awards-list { list-style: none; padding: 0; margin: 0 auto; max-width: 1000px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.awards-list li { background: var(--white); border-left: 4px solid var(--coffee-light); border-radius: 8px; padding: 1rem 1.2rem; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 0.3rem; }
+.award-title { color: var(--coffee-primary); font-size: 1.05rem; }
+.award-event { color: var(--text-dark); line-height: 1.45; }
+.award-event a { color: var(--text-dark); }
+.award-note { color: var(--coffee-secondary); font-size: 0.9rem; }
+.activities-section { background: var(--white); }
+.activities-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; }
+.activity-item { background: var(--light-gray); border-radius: 10px; padding: 1.2rem 1.5rem; }
+.activity-title { margin: 0 0 0.4rem; color: var(--coffee-primary); font-size: 1.15rem; }
+.activity-detail { margin: 0; color: var(--text-dark); line-height: 1.55; }
+.project-badge { display: inline-block; background: #f3e6da; color: var(--coffee-dark); font-size: 0.85rem; font-weight: 600; padding: 0.3rem 0.6rem; border-radius: 6px; margin: 0 0 0.8rem; }
+@media (max-width: 480px) { .project-card { width: 100%; } }

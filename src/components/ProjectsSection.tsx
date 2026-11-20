@@ -2,12 +2,51 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 
 const ProjectsSection: React.FC = () => {
-  const projects = [
+  const projects: {
+    thumbnail: string; title: string; description: string; role: string; services: string[];
+    demoLink?: string; githubLink?: string; links?: { label: string; url: string }[]; badge?: string;
+  }[] = [
+    {
+      thumbnail: 'images/loupein.svg',
+      title: 'Loupein',
+      badge: '1st place, Agents Track, AITX Community Hackathon, Houston (Sept 2026)',
+      description: 'A proof-of-concept dental assistant. Before a procedure, it reviews the patient\'s chart and surfaces only the findings the record actually supports, each linked back to its source row. It runs as a phone-width web app with hands-free voice.',
+      role: 'On a 5-person team, I built the LangGraph orchestration of 4 agents: one turns a request into an investigation plan, one investigates the chart with 9 fixed record tools (no free-form SQL), a skeptic agent decides what to surface, dismiss or verify, and one composes the answer.',
+      services: ['LangGraph multi-agent orchestration', 'FastAPI', 'Next.js', 'Supabase Postgres', 'Gemini and Gemini Live API (voice)', 'Tool calling'],
+      links: [{ label: 'GitHub', url: 'https://github.com/agenticLoupes/agenticloop' }]
+    },
+    {
+      thumbnail: 'images/opengrid.svg',
+      title: 'OpenGrid',
+      badge: '2nd place, Base Power x AITX Hackathon, Austin Deep Tech Week (Sept 2026)',
+      description: 'An orchestrator for a fleet of home batteries. It pulls live data from ERCOT, the EIA and the National Weather Service, decides how to sell battery capacity across several customers, and sends signed commands to every battery, while a separate checker vetoes any command that breaks a hard rule, like selling the same kilowatt-hour twice.',
+      role: 'I owned correctness on a team of 4: 131 tests, including property-based tests that throw thousands of randomized scenarios at the system\'s 14 hard rules, and end-to-end suites that run dispatch and safe-stop scenarios against simulated batteries and markets. One test caught that the safety checker ignored a battery\'s health flag.',
+      services: ['Python', 'pytest and Hypothesis (property-based testing)', 'End-to-end testing against simulators', 'API reference docs'],
+      links: []
+    },
+    {
+      thumbnail: 'images/phishguard.svg',
+      title: 'PhishGuard',
+      badge: "Master's thesis, Texas A&M · Published at ICAIR 2025",
+      description: 'A privacy-preserving phishing detector that explains its verdicts in a Gmail side panel. A fine-tuned classifier flags the email and a small language model explains why, and the raw email never leaves the local trust boundary.',
+      role: 'I built it end to end, from problem framing to deployment: a FastAPI backend serving a fine-tuned DeBERTa-v3 classifier (0.979 F1 on held-out emails) and a LoRA-tuned Gemma-2 explanation model. A confidence gate skips the LLM for low-risk emails, cutting average response latency 45.5%.',
+      services: ['FastAPI', 'DeBERTa-v3 fine-tuning', 'Gemma-2 + LoRA', 'Google Apps Script (Gmail add-on)', 'Prompt-injection hardening'],
+      links: [{ label: 'Paper', url: 'https://papers.academic-conferences.org/index.php/icair/article/view/4373' }]
+    },
+    {
+      thumbnail: 'images/tricko.svg',
+      title: 'Tricko',
+      badge: '1st place, BUILD Halloween Hacks 2025 ($1,294)',
+      description: 'A Halloween app built in one weekend: real-time geolocation with live markers, separate roles for treat-givers and trick-or-treaters, and a points-and-rewards system with local-business redemption.',
+      role: 'Built in a weekend hackathon with React Native and Expo, with Firebase Auth and Firestore for real-time data and role-based access.',
+      services: ['React Native', 'Expo', 'TypeScript', 'Firebase Auth', 'Firestore', 'React Native Maps'],
+      links: [{ label: 'Devpost', url: 'https://devpost.com/software/tricko' }, { label: 'GitHub', url: 'https://github.com/Rishabh-Pagaria/tricko' }]
+    },
     {
       thumbnail: 'images/Rakuun.png',
       title: 'Rakuun',
       description: 'Rakuun is a Chrome extension that intelligently selects webpage text to extract recipient emails, generate contextual subject lines and personalized email content using AI, with seamless one-click email sending directly from the extension interface.',
-      role: 'Professional email outreach is often time-consuming and requires manual personalization for each recipient. Rakuun revolutionizes this process by leveraging AI to automate intelligent email composition based on webpage context. I served as Full Stack Developer, architecting the entire system using Next.js for the web dashboard, Chrome Extension APIs for browser integration, Google Gemini AI for content generation, Supabase for authentication and data persistence, and implementing OAuth 2.0 for secure user management.',
+      role: 'Professional email outreach is often time-consuming and requires manual personalization for each recipient. Rakuun uses AI to automate intelligent email composition based on webpage context. I served as Full Stack Developer, architecting the entire system using Next.js for the web dashboard, Chrome Extension APIs for browser integration, Google Gemini AI for content generation, Supabase for authentication and data persistence, and implementing OAuth 2.0 for secure user management.',
       services: [
         'Full Stack Development using Next.js',
         'Chrome Extension Development',
@@ -25,7 +64,7 @@ const ProjectsSection: React.FC = () => {
       thumbnail: 'images/EventNXT.png',
       title: 'EventNXT',
       description: 'The customer is looking for an event management application similar to Ticketmaster, but specifically designed for the fashion industry. The platform enables users to manage guest lists, ticket sales, RSVPs, customer rewards, and send emails in one centralized space.',
-      role: 'This project being a legacy project was developed as part of my Software Engineering course where the client was FashioNXT from Fashion Tech, I worked as software developer, driving client calls, and leading the team using agile methodologies. This legacy project we developed using Ruby on Rails, PostgreSQL, Rspec & Cucumber for Software Testing, and Web Hosting on Heroku.',
+      role: 'This legacy project was developed as part of my Software Engineering course where the client was FashioNXT from Fashion Tech, I worked as software developer, driving client calls, and leading the team using agile methodologies. We built it with Ruby on Rails, PostgreSQL, Rspec & Cucumber for Software Testing, and Web Hosting on Heroku.',
       services: ['Full Stack Development using Ruby on Rails', 'Unit Testing using Rspec & Cucumber', 'Project Management using Linear - an agile methodology tool', 'Web Hosting using Heroku', 'Pitch Creation and Presentation'],
       demoLink: 'https://www.youtube.com/watch?v=h4WR0lMknIk',
       githubLink: 'https://github.com/FashioNXT/EventNXT-Fall2024/tree/main'
@@ -43,7 +82,7 @@ const ProjectsSection: React.FC = () => {
       thumbnail: 'images/seatFlex.png',
       title: 'SeatFlex',
       description: 'As part of the TAMUHACK 2025 hackathon, our team developed an Airline Overbooking Volunteer System as American Airline Challenge. This application is part of a MVP that allows users to volunteer for overbooked flights, helping airlines manage passenger loads efficiently.',
-      role: 'Led a team of 3 to work on this project in a 2 day Hacathon Setting. My team was involved from ideation, development of MVP and presenting the solution to the judges. The project was built using HTML, CSS, and JavaScript. Won the Best Begineer Software Category with a $200 worth JBL Speakers as a prize. Furthermore, working on this project to add authentication, database and other features to make it a full fledged application.',
+      role: 'Led a team of 3 to work on this project in a 2 day hackathon Setting. My team was involved from ideation, development of MVP and presenting the solution to the judges. The project was built using HTML, CSS, and JavaScript. Won the Best Beginner Software Category with a $200 worth JBL Speakers as a prize. Furthermore, working on this project to add authentication, database and other features to make it a full fledged application.',
       services: ['Frontend Development through JavaScript', 'UI/UX using Figma', 'Project Lead', 'Prototyping and Presentation'],
       demoLink: 'https://www.youtube.com/watch?v=Ges_APbVLbk',
       githubLink: 'https://devpost.com/software/seat-flex'
@@ -52,7 +91,7 @@ const ProjectsSection: React.FC = () => {
       thumbnail: 'images/LithiScanner.jpg',
       title: 'LithiScan',
       description: 'The work was part of a competition AGGIES Invent hosted by Los Alamos National Laboratory, where our problem statement was to develop a radiation monitoring system prototype to detect leak of harmful nuclear radiations through a Small Modular Nuclear Reactor (SMR).',
-      role: 'We were a interdisciplinary team of 7 students, where I was responsible to gather subject matter expertise and prepare a pitch deck for the prototype. This pitch was presented to the pannel consisting of Research Nuclear Scientists from Los Alamos National Laboratory. Our team LithiScan won 2nd place and raised $2500 in prize money.',
+      role: 'We were an interdisciplinary team of 7 students, where I gathered subject matter expertise and prepared a pitch deck for the prototype. This pitch was presented to the panel consisting of Research Nuclear Scientists from Los Alamos National Laboratory. Our team LithiScan won 2nd place and raised $2500 in prize money.',
       services: ['Project Management', 'Research and Development', 'Pitch Deck Creation', 'Branding & Video Editing'],
       demoLink: 'https://drive.google.com/file/d/1XxDcdYuahEP7muHYCYupcpbGyVabTHvK/view?usp=sharing',
       githubLink: '#'
@@ -64,7 +103,7 @@ const ProjectsSection: React.FC = () => {
       <div className="container">
         <h2 className="section-title">Projects</h2>
         <p className="section-subtitle">
-          A showcase of my recent work and personal projects
+          Hackathon wins, research and side projects, newest first
         </p>
         
         <div className="projects-grid">
@@ -78,6 +117,8 @@ const ProjectsSection: React.FC = () => {
               services={project.services}
               demoLink={project.demoLink}
               githubLink={project.githubLink}
+              links={project.links}
+              badge={project.badge}
             />
           ))}
         </div>

@@ -8,6 +8,8 @@ interface ProjectCardProps {
   services: string[];
   demoLink?: string;
   githubLink?: string;
+  links?: { label: string; url: string }[];
+  badge?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -17,8 +19,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   role,
   services,
   demoLink,
-  githubLink
+  githubLink,
+  links,
+  badge
 }) => {
+  const allLinks = links ?? [
+    ...(demoLink && demoLink !== '#' ? [{ label: 'Demo', url: demoLink }] : []),
+    ...(githubLink && githubLink !== '#' ? [{ label: 'View', url: githubLink }] : []),
+  ];
   return (
     <div className="project-card">
       <div className="project-image">
@@ -32,19 +40,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="project-header">
           <h3 className="project-title">{title}</h3>
           <div className="project-links">
-            {demoLink && (
-              <a href={demoLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                Demo↗
+            {allLinks.map((l) => (
+              <a key={l.url} href={l.url} target="_blank" rel="noopener noreferrer" className="project-link">
+                {l.label}↗
               </a>
-            )}
-            {githubLink && (
-              <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                View↗
-              </a>
-            )}
+            ))}
           </div>
         </div>
         
+        {badge && <p className="project-badge">{badge}</p>}
         <p className="project-description">{description}</p>
         
         <div className="project-section">
@@ -53,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
         
         <div className="project-section">
-          <h4 className="section-heading">Services</h4>
+          <h4 className="section-heading">Stack &amp; skills</h4>
           <p className="section-content">
             {services.join(', ')}
           </p>
